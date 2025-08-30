@@ -41,7 +41,7 @@ export const useSignup = () => {
       await signup(email, password);
       router.push("/");
     } catch (err) {
-      setError("Signup failed");
+      setError(err as string || "Signup failed");
     }
 
     setLoading(false);
